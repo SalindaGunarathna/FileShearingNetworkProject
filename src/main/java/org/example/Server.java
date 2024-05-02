@@ -7,7 +7,7 @@ import java.net.Socket;
 public class Server {
 
 
-    public static final String FILES_PATH = "./files/server" ;
+    public static final String FILES_PATH = "./Files/server" ;
     private ServerSocket serverSocket;
     public  static  final int PORT = 3030;
 
@@ -35,13 +35,19 @@ public class Server {
                        } catch (IOException e) {
                            throw new RuntimeException(e);
                        }
-                      
+
                    }).start();
                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+    }
+
+
+    public static void main(String[] args) {
+
+        new Server();
     }
 
 }
